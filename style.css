@@ -1,0 +1,112 @@
+html, body {
+    height: 100%;
+    width:100%;
+    padding:0;
+    background-image: url("images/crumpledpaper.jpg");
+    background-color: rgb(0, 153, 255);
+  }
+
+  /* navigation menu */
+nav {
+   margin: 0 auto;
+  display: flex;
+  padding: 10px;
+}
+#nav-ul {
+  list-style-image: none;
+}
+.nav-li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+/* styles the image of Grace on the landing page */
+  .landingGrace {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    border-radius: 50%;
+  }
+
+.button {
+    background-color: #ff4800;
+    border: none;
+    color: white;
+    padding: 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2vw;
+    margin: 4px 2px;
+  }
+  
+  .button1 {
+    border-radius: 60%;
+    position: relative;
+    top: 1vw; /* how far from the top */
+    left: 4vw;  /* how far from the left */
+  }
+  .button2 {
+    border-radius: 60%;
+    position: relative;
+    top: 1vw; 
+    left: 8vw; 
+  }
+
+  a:link {
+    color: rgb(209, 223, 11);
+    text-decoration: none; /* gets rid of the underline */
+  }
+  
+  /* visited link */
+  a:visited {
+    color: green;
+    text-decoration: none; /* gets rid of the underline */
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+    text-decoration: none; /* gets rid of the underline */
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+    text-decoration: none;   /* gets rid of the underline */
+  }
+
+  /* bio page styling */
+  .body-div-bio{
+    display:flex;
+    height:100vh;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .style-div-bio{
+    width: 50vw; /* make your div wider */
+    height:20vw; /* make your div taller*/
+    background-color: rgb(146, 145, 145, 0.5);
+    border-radius: 100px 15px 100px 10px;
+  }
+
+  .h1-bio {
+    font-family: 'VT323';
+    font-size: 3vw;
+    text-shadow: 0 0 5px #C8C8C8; /* this makes it a little blurry to look like old school terminals */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .p-bio {
+    font-family: 'VT323';
+    font-size: 1vw;
+    text-shadow: 0 0 5px #C8C8C8; /* this makes it a little blurry to look like old school terminals */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  
