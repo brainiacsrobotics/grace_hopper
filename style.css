@@ -9,8 +9,8 @@ html, body {
   /* navigation menu */
 nav {
    margin: 0 auto;
-  display: flex;
-  padding: 10px;
+   display: flex;
+   padding: 10px;
 }
 #nav-ul {
   list-style-image: none;
@@ -22,11 +22,11 @@ nav {
 
 /* styles the image of Grace on the landing page */
   .landingGrace {
-    display: block;
-    margin-left: auto;
+    display: block; /* Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width */
+    margin-left: auto; /* horizontally centers the element within its container */
     margin-right: auto;
     width: 40%;
-    border-radius: 50%;
+    border-radius: 50%; /* rounds the image */
   }
 
 .button {
@@ -77,17 +77,18 @@ nav {
     text-decoration: none;   /* gets rid of the underline */
   }
 
-  /* bio page styling */
-  .body-div-bio{
+  /* //////////////////bio page styling ///////////////////*/
+   /* //////////////////If you want different pages to be styled differents, you can give them unique classes///////////////////*/
+  #body-div-bio{
     display:flex;
-    height:100vh;
+    height:60vh;
     align-items: center;
     justify-content: center;
   }
   
   .style-div-bio{
     width: 50vw; /* make your div wider */
-    height:20vw; /* make your div taller*/
+    height: auto; /* width of the div is dependent on content*/
     background-color: rgb(146, 145, 145, 0.5);
     border-radius: 100px 15px 100px 10px;
   }
@@ -95,7 +96,6 @@ nav {
   .h1-bio {
     font-family: 'VT323';
     font-size: 3vw;
-    text-shadow: 0 0 5px #C8C8C8; /* this makes it a little blurry to look like old school terminals */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,10 +103,28 @@ nav {
   .p-bio {
     font-family: 'VT323';
     font-size: 1vw;
-    text-shadow: 0 0 5px #C8C8C8; /* this makes it a little blurry to look like old school terminals */
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
+  .p-contributions {
+    font-family: 'VT323';
+    font-size: 1vw;
+    align-items: left;
+    justify-content: left;
+    padding: 1vw 3vw 1vw;
+  }
+
+  .img-contributions{
+    display: block; /* Displays an element as a block element. It starts on a new line, the browsers automatically add some space (a margin) before and after the element, and takes up the whole width */
+    margin-left: auto; /* horizontally centers the element within its container */
+    margin-right: auto;
+    width: 40%;
+    border-radius: 20%; /* rounds the image */
+    margin-bottom: 2vw;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4); /* https://www.w3schools.com/cssref/css3_pr_box-shadow.php */
+  }
+
 
   
