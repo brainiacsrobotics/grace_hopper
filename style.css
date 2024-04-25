@@ -1,10 +1,3 @@
-html, body {
-    height: 100%;
-    width:100%;
-    padding:0;
-    background-image: url("images/crumpledpaper.jpg");
-    background-color: rgb(0, 153, 255);
-  }
 
   /* navigation menu */
 nav {
@@ -24,52 +17,75 @@ nav {
   .landingGrace {
     display: block; /* Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width */
     margin-left: auto; /* horizontally centers the element within its container */
-    margin-right: auto;
-    width: 40%;
+    margin-right: 10%;
+    margin-bottom: 0%;
+    margin-top: 10%;
+    width: 30%;
     border-radius: 50%; /* rounds the image */
   }
 
 .button {
-    background-color: #ff4800;
+    background-color: white;
     border: none;
     color: white;
-    padding: 60px;
+    padding: 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 2vw;
-    margin: 4px 2px;
+    font-size: 1vw;
+    margin: 4px 0px;
+    box-shadow: 5px 10px #888888;
   }
   
   .button1 {
+    width: 75px;
+    height: 75px;
     border-radius: 60%;
     position: relative;
-    top: 1vw; /* how far from the top */
-    left: 4vw;  /* how far from the left */
+    top: 0.5vw; /* how far from the top */
+    left: 0.5vw;  /* how far from the left */
   }
   .button2 {
+    width: 75px;
+    height: 75px;
     border-radius: 60%;
     position: relative;
-    top: 1vw; 
-    left: 8vw; 
+    top: 0.5vw; 
+    left: 4vw; 
   }
   .button3 {
-    
-    width: 100%;
-    height:100%;
+    width: 75px;
+    height: 75px;
     border-radius: 60%;
     position: relative;
-    top: 1vw; 
+    top: 0.5vw; 
+    left: 8vw;
+  }
+  .button4 {
+    width: 75px;
+    height: 75px;
+    border-radius: 60%;
+    position: relative;
+    top: 0.5vw; 
     left: 12vw;
   }
+  .button5 {
+    width: 75px;
+    height: 75px;
+    border-radius: 60%;
+    position: relative;
+    font-size: 1vw;
+    top: 0.5vw; 
+    left: 16vw;
+  }
   a:link {
-    color: rgb(209, 223, 11);
+    color: rgb(0, 0, 0);
     text-decoration: none; /* gets rid of the underline */
   }
   
   /* visited link */
   a:visited {
-    color: green;
+    color: rgb(0, 0, 0);
     text-decoration: none; /* gets rid of the underline */
   }
   
@@ -103,13 +119,15 @@ nav {
 
   .h1-bio {
     font-family: 'VT323';
+    color:#fff;
     font-size: 3vw;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .p-bio {
-    font-family: 'VT323';
+    font-family: 'VT323';    
+    color:#fff;
     font-size: 1vw;
     display: flex;
     align-items: center;
@@ -136,7 +154,6 @@ nav {
 
   .slider, 
 .slider > div {
-    /* Images default to Center Center. Maybe try 'center top'? */
     background-position: center center;
     display: block;
     width: 100%;
@@ -164,7 +181,7 @@ nav {
     margin: 20px;
     top: 40%;
     text-shadow: 0 10px 2px #223422;
-    transition: .3s;
+    /*transition: .3s;*/ /*Uncomment this line if you want it to autoplay*/
     width: 30px;
     padding: 10px 13px;
     background: #fff;
