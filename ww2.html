@@ -8,35 +8,199 @@
     <link rel="stylesheet" href="style.css">
     <style>
       html, body {
-    height:100%;
-    width:100%;
-    padding:0;
-    background-image: url("images/minesweep.jpg");
-    background-size: cover;
-    background-color: rgb(0, 153, 255);
-  
-  background-attachment: fixed;
-  background-position: left;
-  }
-
+        height:100%;
+        width:100%;
+        padding:0;
+        background-image: url("images/minesweep.jpg");
+        background-size: cover;
+        background-color: rgb(0, 153, 255);      
+        background-attachment: fixed;
+        background-position: left;
+      }
+    </style>
+    <button class="button button6"><a href = "realindex.html"><p style="font-family:FABIOLO">Home</p></a></button>
+    <style>
+      
+      </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    * {box-sizing: border-box}
+    body {font-family: Verdana, sans-serif; margin:0}
+    .mySlides {display: none}
+    img {vertical-align: middle;}
+    
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 800px;
+      position: relative;
+      margin: auto;
+    }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: rgb(10, 10, 10);
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+      background-color: black;
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: black;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #080808;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+    
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+    }
     </style>
   </head>
   <body>
     <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    
+    <div class="slideshow-container">
 
-    <nav>
-      <ul id = "nav-ul">
-        <li class = "nav-li"><a href = "realindex.html"><img src = "images/home button.png"></a></li>
-      </ul>
-
-    </nav>
-    <main>
-      <div id = "body-div-bio">
-        <div class = "style-div-bio">
-          <h1 class = "h1-bio">WWII contributions</h1>
-          <p class = "p-bio">You can type all sorts of bio stuff here.</p>
-        </div>
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 6</div>
+        <img src="images/bomb.jpg" style="width:100%">
+        <div class="text">WWII</div>
       </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 6</div>
+        <img src="images/bomb.jpg" style="width:100%">
+        <div class="text">When the US entered the war after being attacked at Pearl Harbor, Grace immediately knew that she wanted to enlist in the military and serve her country. </div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 6</div>
+        <img src="images/waves.jpg" style="width:100%">
+        <div class="text">Grace tried to join the United States Naval Reserve as a member of the WAVES, or Women Accepted for Volunteer Emergency Service. The WAVES served in wartime jobs previously held by men, such as clerical work, medicine, parachute rigging, engineering, etc. </div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 6</div>
+        <img src="images/rejcted2.jpg" style="width:100%">
+        <div class="text">Unfortunately, Grace was initally denied by the Navy. They said she was too old (35) and didn't weigh enough for her height. They also said that her teaching job at Vassar was a "high need" position that she was not allowed to leave.</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 6</div>
+        <img src="images/1944navy_1_16.webp" style="width:100%">
+        <div class="text">Grace was persistent! She did not give up just because she was rejected. Finally, in December 1943, Grace Hopper was sworn in to the United States Naval Reserve.</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">6 / 6</div>
+        <img src="images/navy1944.jpg" style="width:100%">
+        <div class="text">Grace was persistent! She did not give up just because she was rejected. Finally, in December 1943, Grace Hopper was sworn in to the United States Naval Reserve.</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+      
+      </div>
+      <br>
+      
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span> 
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+      </div>
+      
+      <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+      </script>
     </main>
   </body>
 </html>

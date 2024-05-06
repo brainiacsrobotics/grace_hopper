@@ -11,28 +11,120 @@
     height: 100%;
     width:100%;
     padding:0;
-    background-image: url("images/crumpledpaper.jpg");
-    background-color: rgb(0, 153, 255);
+    background-image: url("images/");
+    background-color: rgb(187, 0, 255);
   }
-
+</style>
+<button class="button button6"><a href = "realindex.html"><p style="font-family:FABIOLO">Home</p></a></button>
+<style>
     </style>
   </head>
   <body>
     <script type="text/javascript" src="jquery-3.3.1.js"></script>
 
-    <nav>
-      <ul id = "nav-ul">
-        <li class = "nav-li"><a href = "realindex.html"><img src = "images/home button.png"></a></li>
-      </ul>
-
-    </nav>
-    <main>
-      <div id = "body-div-bio">
-        <div class = "style-div-bio">
-          <h1 class = "h1-bio">FUN FACTS</h1>
-          <p class = "p-bio">You can type all sorts of bio stuff here.</p>
+   
+      <!DOCTYPE html>
+      <html>
+      <head>
+          <title>Images test</title>
+      </head>
+      
+      <style>
+      .container {
+          position: relative;
+          width: 33.3333%;
+          float: left;
+      }
+      
+      .image {
+          opacity: 1;
+          display: block;
+          width: 100%;
+          height: auto;
+          transition: .5s ease;
+          backface-visibility: hidden;
+      }
+      
+      .middle {
+          transition: .5s ease;
+          opacity: 0;
+          position: absolute;
+          top: 50%;
+          left: 25%;
+          transform: translate(-15%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          text-align: center;
+      }
+      
+      .container:hover .image {
+          opacity: 0.3;
+      }
+      
+      .container:hover .middle {
+          opacity: 1;
+      }
+      
+      .text {
+          background-color: #4CAF50;
+          color: white;
+          font-size: 16px;
+          padding: 16px 16px;
+      }
+      
+      </style>
+      
+      <body>
+      
+      <h4>Hover over each image to read some fun facts about Grace Hopper</h4>
+      
+      <div class="container">
+        <img src="images/clocks.png" alt="Headphones" class="image">
+        <div class="middle">
+          <div class="text">When she was just 7 years old, she took apart her alarm clock. She wanted to know what made the clock ring. But when she unscrewed the plack plate gears and springs fell out. Grace did not know how to put them back together. Luckily, she had another alarm clock. She could open it and see where all the gears went. But this one had the same problem. As soon as she opened the back, everything fell out. Grace opened five more alarm clocks. The same thing happened each time. When Grace's parents discovered the clocks, they did not scold her. They encouraged her love of learning. In fact, her mother let her have one alarm clock just so she could experiment on it.
+          </div>
         </div>
       </div>
+      
+      <div class="container">
+        <img src="images/fhockey.png" alt="Other Headphones" class="image">
+        <div class="middle">
+          <div class="text">Grace Hopper played basketball, water polo, and field hockey.
+          </div>
+        </div>
+      </div>
+      
+      <div class="container">
+        <img src="images/latinf.png" alt="Other Headphones" class="image">
+        <div class="middle">
+          <div class="text">When Grace first applied to college, she did not get accepted due to failing the Latin entrance exam. 
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <img src="images/debug.png" alt="Headphones" class="image">
+        <div class="middle">
+          <div class="text">In most sources (even the Smithsonian and...), Grace is credited as using the term "debug" for the first time in a journal entry about finding a moth in the Mark I. However, research shows that she was not actually the one to first use this term. Read this article for more information: 
+          </div>
+        </div>
+      </div>
+      
+      <div class="container">
+        <img src="images/moty.png" alt="Other Headphones" class="image">
+        <div class="middle">
+          <div class="text">In 1969, the Data Processing Management Association awarded Grace Hopper the first ever computer science Man of the Year Award. </div>
+        </div>
+      </div>
+      
+      <div class="container">
+        <img src="images/retire.png" alt="Other Headphones" class="image">
+        <div class="middle">
+          <div class="text">When Grace Hopper retired, she was the oldest active duty officer in the Navy, at years old.
+          </div>
+        </div>
+      </div>
+      
+      </body>
+      </html>
     </main>
   </body>
 </html>

@@ -6,33 +6,206 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Grace Hopper</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <style>
-      html, body {
-    height: 100%;
-    width:100%;
-    padding:0;
-    background-image: url("images/");
-    background-color: rgb(0, 153, 255);
-  }
-
+    html, body {
+      height: 100%;
+      width:100%;
+      padding:0;
+      background-image: url(images/Wires-and-Cables.jpeg);
+      background-color: rgb(0, 153, 255);
+      background-size: 100vw 100vh;
+      background-repeat: yes-repeat;
+    }
+  </style>
+    <button class="button button6"><a href = "realindex.html"><p style="font-family:FABIOLO">Home</p></a></button>
+    <style>
     </style>
   </head>
   <body>
-    <script type="text/javascript" src="jquery-3.3.1.js"></script>
-
-    <nav>
-      <ul id = "nav-ul">
-        <li class = "nav-li"><a href = "realindex.html"><img src = "images/home button.png"></a></li>
-      </ul>
-
-    </nav>
+     
     <main>
       <div id = "body-div-bio">
         <div class = "style-div-bio">
-          <h1 class = "h1-bio">legacy</h1>
-          <p class = "p-bio">You can type all sorts of bio stuff here.</p>
+          <h1 class = "h1-bio">Grace Hopper's Legacy</h1>
+          <!--Slider: https://codepen.io/rohankokkula/pen/bGdXveJ-->
+          <div class="slider" id="slider3">
+            <div style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/jungle.jpg)">
+           <span><h2>A mathematics genius and computer pioneer, Grace Hopper created computer programming technology that forever changed the flow of information and paved the way for modern data processing. In 1952 she developed the first compiler called A-0, which translated mathematical code into machine-readable code—an important step toward creating modern programming languages.</h2></span></div>
+            <div style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/1200_110627-8240-Myst.jpg)">
+           <span><h2>In computing, a compiler is a computer program that translates computer code written in one programming language into another language. Grace was the first person to pioneer the idea of an automatic programing. Before Hopper's compiler all computer programs were built from scratch-even if they shared much of the same code. The process took a lot of time. Mistakes were often made.
+           </h2></span></div>
+           <div style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/1200_bodie-11.jpg)">
+            <span><h2>Grace has invented the code that we today still use today called COBOL. COBOL is a code that could run on different computers for both businesses and the military. Because the Department of Defense used COBOL, any company that wanted to work with them had to use COBOL too. Today 80 percent of all daily business dealings around the world use COBOL.</h2></span></div>
+                   <!-- The Arrows -->
+                   <i class="left" class="arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"></path></svg></i>
+                   <i class="right" class="arrows" style="z-index:2; position:absolute;">
+                 <svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" transform="translate(100, 100) rotate(180) "></path></svg></i>
+               </div>
+           </div>
         </div>
       </div>
     </main>
+    <script>
+    (function($) {
+      "use strict";
+      $.fn.sliderResponsive = function(settings) {
+        
+        var set = $.extend( 
+          {
+            slidePause: 5000,
+            fadeSpeed: 800,
+            autoPlay: "on",
+            showArrows: "on", 
+            hideDots: "off", 
+            hoverZoom: "on",
+            titleBarTop: "off"
+          },
+          settings
+        ); 
+        
+        var $slider = $(this);
+        var size = $slider.find("> div").length; //number of slides
+        var position = 0; // current position of carousal
+        var sliderIntervalID; // used to clear autoplay
+          
+        // Add a Dot for each slide
+        $slider.append("<ul></ul>");
+        $slider.find("> div").each(function(){
+          $slider.find("> ul").append('<li></li>');
+        });
+          
+        // Put .show on the first Slide
+        $slider.find("div:first-of-type").addClass("show");
+          
+        // Put .showLi on the first dot
+        $slider.find("li:first-of-type").addClass("showli")
+    
+         //fadeout all items except .show
+        $slider.find("> div").not(".show").fadeOut();
+        
+        // If Autoplay is set to 'on' than start it
+        if (set.autoPlay === "on") {
+            startSlider(); 
+        } 
+        
+        // If showarrows is set to 'on' then don't hide them
+        if (set.showArrows === "on") {
+            $slider.addClass('showArrows'); 
+        }
+        
+        // If hideDots is set to 'on' then hide them
+        if (set.hideDots === "on") {
+            $slider.addClass('hideDots'); 
+        }
+        
+        // If hoverZoom is set to 'off' then stop it
+        if (set.hoverZoom === "off") {
+            $slider.addClass('hoverZoomOff'); 
+        }
+        
+        // If titleBarTop is set to 'on' then move it up
+        if (set.titleBarTop === "on") {
+            $slider.addClass('titleBarTop'); 
+        }
+    
+        // function to start auto play
+        function startSlider() {
+          sliderIntervalID = setInterval(function() {
+            nextSlide();
+          }, set.slidePause);
+        }
+        
+        // on mouseover stop the autoplay
+        $slider.mouseover(function() {
+          if (set.autoPlay === "on") {
+            clearInterval(sliderIntervalID);
+          }
+        });
+          
+        // on mouseout starts the autoplay
+        $slider.mouseout(function() {
+          if (set.autoPlay === "on") {
+            startSlider();
+          }
+        });
+    
+        //on right arrow click
+        $slider.find("> .right").click(nextSlide)
+    
+        //on left arrow click
+        $slider.find("> .left").click(prevSlide);
+          
+        // Go to next slide
+        function nextSlide() {
+          position = $slider.find(".show").index() + 1;
+          if (position > size - 1) position = 0;
+          changeCarousel(position);
+        }
+        
+        // Go to previous slide
+        function prevSlide() {
+          position = $slider.find(".show").index() - 1;
+          if (position < 0) position = size - 1;
+          changeCarousel(position);
+        }
+    
+        //when user clicks slider button
+        $slider.find(" > ul > li").click(function() {
+          position = $(this).index();
+          changeCarousel($(this).index());
+        });
+    
+        //this changes the image and button selection
+        function changeCarousel() {
+          $slider.find(".show").removeClass("show").fadeOut();
+          $slider
+            .find("> div")
+            .eq(position)
+            .fadeIn(set.fadeSpeed)
+            .addClass("show");
+          // The Dots
+          $slider.find("> ul").find(".showli").removeClass("showli");
+          $slider.find("> ul > li").eq(position).addClass("showli");
+        }
+    
+        return $slider;
+      };
+    })(jQuery);
+    
+    
+     
+    //////////////////////////////////////////////
+    // Activate each slider - change options
+    //////////////////////////////////////////////
+    $(document).ready(function() {
+      
+      $("#slider1").sliderResponsive({
+      // Using default everything
+        // slidePause: 5000,
+        // fadeSpeed: 800,
+        // autoPlay: "on",
+        // showArrows: "off", 
+        // hideDots: "off", 
+        // hoverZoom: "on", 
+        // titleBarTop: "off"
+      });
+      
+      $("#slider2").sliderResponsive({
+        fadeSpeed: 300,
+        autoPlay: "on",
+        showArrows: "on",
+        hideDots: "on"
+      });
+      
+      $("#slider3").sliderResponsive({
+        hoverZoom: "on",
+        hideDots: "on"
+      });
+      
+    }); 
+
+    </script>
+
   </body>
 </html>
