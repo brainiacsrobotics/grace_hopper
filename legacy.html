@@ -6,206 +6,188 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Grace Hopper</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <style>
-    html, body {
-      height: 100%;
-      width:100%;
-      padding:0;
-      background-image: url(images/Wires-and-Cables.jpeg);
-      background-color: rgb(0, 153, 255);
-      background-size: 100vw 100vh;
-      background-repeat: yes-repeat;
-    }
-  </style>
+      html, body {
+        height:100%;
+        width:100%;
+        padding:0;
+        background-image: url("images/Wires-and-Cables.jpeg");
+        background-size: cover;
+        background-color: rgb(0, 153, 255);      
+        background-attachment: fixed;
+        background-position: left;
+      }
+    </style>
     <button class="button button6"><a href = "realindex.html"><p style="font-family:FABIOLO">Home</p></a></button>
     <style>
+      
+      </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    * {box-sizing: border-box}
+    body {font-family: Verdana, sans-serif; margin:0}
+    .mySlides {display: none}
+    img {vertical-align: middle;}
+    
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 800px;
+      position: relative;
+      margin: auto;
+    }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: rgb(10, 10, 10);
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      font-weight: bold;
+      text-align: center;
+      background-color: black;
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: black;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #080808;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+    
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+    }
     </style>
   </head>
   <body>
-     
-    <main>
-      <div id = "body-div-bio">
-        <div class = "style-div-bio">
-          <h1 class = "h1-bio">Grace Hopper's Legacy</h1>
-          <!--Slider: https://codepen.io/rohankokkula/pen/bGdXveJ-->
-          <div class="slider" id="slider3">
-            <div style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/jungle.jpg)">
-           <span><h2>A mathematics genius and computer pioneer, Grace Hopper created computer programming technology that forever changed the flow of information and paved the way for modern data processing. In 1952 she developed the first compiler called A-0, which translated mathematical code into machine-readable code—an important step toward creating modern programming languages.</h2></span></div>
-            <div style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/1200_110627-8240-Myst.jpg)">
-           <span><h2>In computing, a compiler is a computer program that translates computer code written in one programming language into another language. Grace was the first person to pioneer the idea of an automatic programing. Before Hopper's compiler all computer programs were built from scratch-even if they shared much of the same code. The process took a lot of time. Mistakes were often made.
-           </h2></span></div>
-           <div style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/1200_bodie-11.jpg)">
-            <span><h2>Grace has invented the code that we today still use today called COBOL. COBOL is a code that could run on different computers for both businesses and the military. Because the Department of Defense used COBOL, any company that wanted to work with them had to use COBOL too. Today 80 percent of all daily business dealings around the world use COBOL.</h2></span></div>
-                   <!-- The Arrows -->
-                   <i class="left" class="arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"></path></svg></i>
-                   <i class="right" class="arrows" style="z-index:2; position:absolute;">
-                 <svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" transform="translate(100, 100) rotate(180) "></path></svg></i>
-               </div>
-           </div>
-        </div>
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 5</div>
+        <img src="images/Untitled presentation (5).jpg" style="width:100%">
+        <div class="text">Use the arrows to scroll through each slide to learn about how Grace Hopper's work still has an impact on the world today. </div>
       </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 5</div>
+        <img src="images/Untitled presentation (4).jpg" style="width:100%">
+        <div class="text">A mathematics genius and computer pioneer, Grace Hopper created computer programming technology that forever changed the flow of information and paved the way for modern data processing. </div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 5</div>
+        <img src="images/Untitled presentation (3).jpg" style="width:100%">
+        <div class="text">Grace was the first person to pioneer the idea of an automatic programing. While working on the UNIVAC I and II, she developed the first concept of a compiler. A compiler is a computer program that translates computer code written in one programming language into another language. Before Hopper's compiler, all computer programs were built from scratch-even if they shared much of the same code. The process took a lot of time. Mistakes were often made. </div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <img src="images/Untitled presentation (2).jpg" style="width:100%">
+        <div class="text">Hopper invented code that we still use today called COBOL. COBOL is code that could be used for businesses and military settings. Hopper wanted people to feel more comfortable using computers, so she made COBOL use words instead of symbols. In a 1980 interview Hopper explained, “What I was after in beginning English language [programming] was to bring another whole group of people able to use the computer easily.” Today, 80% of all daily business dealings around the world use COBOL. </div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <img src="images/Untitled presentation (1).jpg" style="width:100%">
+        <div class="text">Because of her many incredible accomplishments in her lifetime, Rear Admiral Hopper was the recipient of more than forty honorary degrees, and many scholarships, professorships, awards, and conferences are named in her honor.</div>
+      </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+      
+      </div>
+      <br>
+      
+      
+      <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+      </script>
     </main>
-    <script>
-    (function($) {
-      "use strict";
-      $.fn.sliderResponsive = function(settings) {
-        
-        var set = $.extend( 
-          {
-            slidePause: 5000,
-            fadeSpeed: 800,
-            autoPlay: "on",
-            showArrows: "on", 
-            hideDots: "off", 
-            hoverZoom: "on",
-            titleBarTop: "off"
-          },
-          settings
-        ); 
-        
-        var $slider = $(this);
-        var size = $slider.find("> div").length; //number of slides
-        var position = 0; // current position of carousal
-        var sliderIntervalID; // used to clear autoplay
-          
-        // Add a Dot for each slide
-        $slider.append("<ul></ul>");
-        $slider.find("> div").each(function(){
-          $slider.find("> ul").append('<li></li>');
-        });
-          
-        // Put .show on the first Slide
-        $slider.find("div:first-of-type").addClass("show");
-          
-        // Put .showLi on the first dot
-        $slider.find("li:first-of-type").addClass("showli")
-    
-         //fadeout all items except .show
-        $slider.find("> div").not(".show").fadeOut();
-        
-        // If Autoplay is set to 'on' than start it
-        if (set.autoPlay === "on") {
-            startSlider(); 
-        } 
-        
-        // If showarrows is set to 'on' then don't hide them
-        if (set.showArrows === "on") {
-            $slider.addClass('showArrows'); 
-        }
-        
-        // If hideDots is set to 'on' then hide them
-        if (set.hideDots === "on") {
-            $slider.addClass('hideDots'); 
-        }
-        
-        // If hoverZoom is set to 'off' then stop it
-        if (set.hoverZoom === "off") {
-            $slider.addClass('hoverZoomOff'); 
-        }
-        
-        // If titleBarTop is set to 'on' then move it up
-        if (set.titleBarTop === "on") {
-            $slider.addClass('titleBarTop'); 
-        }
-    
-        // function to start auto play
-        function startSlider() {
-          sliderIntervalID = setInterval(function() {
-            nextSlide();
-          }, set.slidePause);
-        }
-        
-        // on mouseover stop the autoplay
-        $slider.mouseover(function() {
-          if (set.autoPlay === "on") {
-            clearInterval(sliderIntervalID);
-          }
-        });
-          
-        // on mouseout starts the autoplay
-        $slider.mouseout(function() {
-          if (set.autoPlay === "on") {
-            startSlider();
-          }
-        });
-    
-        //on right arrow click
-        $slider.find("> .right").click(nextSlide)
-    
-        //on left arrow click
-        $slider.find("> .left").click(prevSlide);
-          
-        // Go to next slide
-        function nextSlide() {
-          position = $slider.find(".show").index() + 1;
-          if (position > size - 1) position = 0;
-          changeCarousel(position);
-        }
-        
-        // Go to previous slide
-        function prevSlide() {
-          position = $slider.find(".show").index() - 1;
-          if (position < 0) position = size - 1;
-          changeCarousel(position);
-        }
-    
-        //when user clicks slider button
-        $slider.find(" > ul > li").click(function() {
-          position = $(this).index();
-          changeCarousel($(this).index());
-        });
-    
-        //this changes the image and button selection
-        function changeCarousel() {
-          $slider.find(".show").removeClass("show").fadeOut();
-          $slider
-            .find("> div")
-            .eq(position)
-            .fadeIn(set.fadeSpeed)
-            .addClass("show");
-          // The Dots
-          $slider.find("> ul").find(".showli").removeClass("showli");
-          $slider.find("> ul > li").eq(position).addClass("showli");
-        }
-    
-        return $slider;
-      };
-    })(jQuery);
-    
-    
-     
-    //////////////////////////////////////////////
-    // Activate each slider - change options
-    //////////////////////////////////////////////
-    $(document).ready(function() {
-      
-      $("#slider1").sliderResponsive({
-      // Using default everything
-        // slidePause: 5000,
-        // fadeSpeed: 800,
-        // autoPlay: "on",
-        // showArrows: "off", 
-        // hideDots: "off", 
-        // hoverZoom: "on", 
-        // titleBarTop: "off"
-      });
-      
-      $("#slider2").sliderResponsive({
-        fadeSpeed: 300,
-        autoPlay: "on",
-        showArrows: "on",
-        hideDots: "on"
-      });
-      
-      $("#slider3").sliderResponsive({
-        hoverZoom: "on",
-        hideDots: "on"
-      });
-      
-    }); 
-
-    </script>
-
   </body>
 </html>

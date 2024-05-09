@@ -12,201 +12,195 @@
       height: 100%;
       width:100%;
       padding:0;
-      background-image: url("images/crumpledpaper.jpg");
-      background-color: rgb(0, 153, 255);
+      background-image: url("images/tiede.png");
+      background-color: rgb(46, 140, 88);
     }
+
+    p {
+  font-size: 18px;
+  font-weight: bold;
+}
+    div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background-color: blue;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 20%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+video{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
   </style>
     <button class="button button6"><a href = "realindex.html"><p style="font-family:FABIOLO">Home</p></a></button>
     <style>
     </style>
   </head>
   <body>
-     
-    <main>
-      <div id = "body-div-bio">
-        <div class = "style-div-bio2">
-          <h2 class = "h1-bio">Contributions</h2>
-          <!--Slider: https://codepen.io/rohankokkula/pen/bGdXveJ-->
-          <div class="slider" id="slider3">
-            <div style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/jungle.jpg)">
-           <span><h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2></span></div>
-            <div style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/1200_110627-8240-Myst.jpg)">
-           <span><h2>I'm a title for Slide #2</h2></span></div>
-           <div style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30256/1200_bodie-11.jpg)">
-            <span><h2>I'm a title for Slide #3</h2></span></div>
-                   <!-- The Arrows -->
-                   <i class="left" class="arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"></path></svg></i>
-                   <i class="right" class="arrows" style="z-index:2; position:absolute;">
-                 <svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" transform="translate(100, 100) rotate(180) "></path></svg></i>
-               </div>
-           </div>
-        </div>
-      </div>
-    </main>
-    <script>
-    (function($) {
-      "use strict";
-      $.fn.sliderResponsive = function(settings) {
-        
-        var set = $.extend( 
-          {
-            slidePause: 5000,
-            fadeSpeed: 800,
-            autoPlay: "on",
-            showArrows: "on", 
-            hideDots: "off", 
-            hoverZoom: "on",
-            titleBarTop: "off"
-          },
-          settings
-        ); 
-        
-        var $slider = $(this);
-        var size = $slider.find("> div").length; //number of slides
-        var position = 0; // current position of carousal
-        var sliderIntervalID; // used to clear autoplay
-          
-        // Add a Dot for each slide
-        $slider.append("<ul></ul>");
-        $slider.find("> div").each(function(){
-          $slider.find("> ul").append('<li></li>');
-        });
-          
-        // Put .show on the first Slide
-        $slider.find("div:first-of-type").addClass("show");
-          
-        // Put .showLi on the first dot
-        $slider.find("li:first-of-type").addClass("showli")
-    
-         //fadeout all items except .show
-        $slider.find("> div").not(".show").fadeOut();
-        
-        // If Autoplay is set to 'on' than start it
-        if (set.autoPlay === "on") {
-            startSlider(); 
-        } 
-        
-        // If showarrows is set to 'on' then don't hide them
-        if (set.showArrows === "on") {
-            $slider.addClass('showArrows'); 
-        }
-        
-        // If hideDots is set to 'on' then hide them
-        if (set.hideDots === "on") {
-            $slider.addClass('hideDots'); 
-        }
-        
-        // If hoverZoom is set to 'off' then stop it
-        if (set.hoverZoom === "off") {
-            $slider.addClass('hoverZoomOff'); 
-        }
-        
-        // If titleBarTop is set to 'on' then move it up
-        if (set.titleBarTop === "on") {
-            $slider.addClass('titleBarTop'); 
-        }
-    
-        // function to start auto play
-        function startSlider() {
-          sliderIntervalID = setInterval(function() {
-            nextSlide();
-          }, set.slidePause);
-        }
-        
-        // on mouseover stop the autoplay
-        $slider.mouseover(function() {
-          if (set.autoPlay === "on") {
-            clearInterval(sliderIntervalID);
-          }
-        });
-          
-        // on mouseout starts the autoplay
-        $slider.mouseout(function() {
-          if (set.autoPlay === "on") {
-            startSlider();
-          }
-        });
-    
-        //on right arrow click
-        $slider.find("> .right").click(nextSlide)
-    
-        //on left arrow click
-        $slider.find("> .left").click(prevSlide);
-          
-        // Go to next slide
-        function nextSlide() {
-          position = $slider.find(".show").index() + 1;
-          if (position > size - 1) position = 0;
-          changeCarousel(position);
-        }
-        
-        // Go to previous slide
-        function prevSlide() {
-          position = $slider.find(".show").index() - 1;
-          if (position < 0) position = size - 1;
-          changeCarousel(position);
-        }
-    
-        //when user clicks slider button
-        $slider.find(" > ul > li").click(function() {
-          position = $(this).index();
-          changeCarousel($(this).index());
-        });
-    
-        //this changes the image and button selection
-        function changeCarousel() {
-          $slider.find(".show").removeClass("show").fadeOut();
-          $slider
-            .find("> div")
-            .eq(position)
-            .fadeIn(set.fadeSpeed)
-            .addClass("show");
-          // The Dots
-          $slider.find("> ul").find(".showli").removeClass("showli");
-          $slider.find("> ul > li").eq(position).addClass("showli");
-        }
-    
-        return $slider;
-      };
-    })(jQuery);
-    
-    
-     
-    //////////////////////////////////////////////
-    // Activate each slider - change options
-    //////////////////////////////////////////////
-    $(document).ready(function() {
-      
-      $("#slider1").sliderResponsive({
-      // Using default everything
-        // slidePause: 5000,
-        // fadeSpeed: 800,
-        // autoPlay: "on",
-        // showArrows: "off", 
-        // hideDots: "off", 
-        // hoverZoom: "on", 
-        // titleBarTop: "off"
-      });
-      
-      $("#slider2").sliderResponsive({
-        fadeSpeed: 300,
-        autoPlay: "on",
-        showArrows: "on",
-        hideDots: "on"
-      });
-      
-      $("#slider3").sliderResponsive({
-        hoverZoom: "on",
-        hideDots: "on"
-      });
-      
-    }); 
+    <h4>Our Process, Meet the Team, & Sources</h4>
 
-    </script>
-<video width="320" height="240" controls>
-  <source src="movie.mp4" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
-Your browser does not support the video tag.
-</video>
-  </body>
+    <video width="640" height="480" controls>
+      <source src="movie.mp4" type="video/mp4">
+      <source src="movie.ogg" type="video/ogg">
+      Your browser does not support the video tag.
+    </video>
+    <br>
+    <h5>Meet the Brainiacs (and their favorite Grace Hopper quotes)</h5>
+    
+    <div class="responsive">
+      <div class="gallery">
+          <img src="images/ac.jpg" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc">Andrew C., 6th grade<br>
+        Favorite GH quote:<br>
+        “Leadership is a 2-way street, loyalty up and loyalty down. Respect for one's superiors; care for one's crew.” </div>
+      </div>
+    </div>
+    
+    <div class="responsive">
+      <div class="gallery">
+          <img src="images/al.jpg" alt="Forest" width="600" height="400">
+        </a>
+        <div class="desc">Andrew L., 4th grade<br>
+        Favorite GH quote:<br>
+        “A ship in port is safe, but that's not what ships are built for.”</div>
+      </div>
+    </div>
+    
+    <div class="responsive">
+      <div class="gallery">
+          <img src="images/aub.JPG" alt="Northern Lights" width="600" height="400">
+        </a>
+        <div class="desc">Aubrey, 6th grade<br>
+        Favorite GH quote:<br>
+        “Don't try to manage people; you manage things; you lead people.”</div>
+      </div>
+    </div>
+    
+    <div class="responsive">
+      <div class="gallery">
+          <img src="images/avery.jpg" alt="Mountains" width="600" height="400">
+        </a>
+        <div class="desc">Avery, 4th grade<br>
+        Favorite GH quote:<br>
+        “The most dangerous phrase in the language is, ‘We've always done it this way.’”</div>
+      </div>
+    </div>
+    
+    <div class="responsive">
+      <div class="gallery">
+          <img src="images/g.jpg" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc">Gryffin, 7th grade<br>
+        Favorite GH quote:<br>
+        “If it's a good idea, go ahead and do it. It is much easier to apologize than it is to get permission.”</div>
+      </div>
+    </div>
+     
+    <div class="responsive">
+      <div class="gallery">
+          <img src="images/matt.jpg" alt="Forest" width="600" height="400">
+        </a>
+        <div class="desc">Matt, 5th grade<br>
+        Favorite GH quote:<br>
+         "A dream is just a dream. A goal is a dream with a plan and a deadline."</div>
+      </div>
+    </div>
+    
+    <div class="responsive">
+      <div class="gallery">
+          <img src="images/peilin.jpg" alt="Northern Lights" width="600" height="400">
+        </a>
+        <div class="desc">Peilin, 6th grade<br>
+        Favorite GH quote:<br>
+        “I've always been more interested in the future than in the past.”</div>
+      </div>
+    </div>
+    
+    <div class="responsive">
+      <div class="gallery">
+          <img src="images/rayce.jpg" alt="Mountains" width="600" height="400">
+        </a>
+        <div class="desc">Rayce, 7th grade<br>
+        Favorite GH quote:<br> 
+        "We've tended to forget that no computer will ever ask a new question."</div>
+      </div>
+    </div>
+    
+    <div class="responsive">
+      <div class="gallery">
+          <img src="images/sean.jpg" alt="Mountains" width="600" height="400">
+        </a>
+        <div class="desc">Sean, 5th grade<br>
+        Favorite GH quote:<br>
+        “The glass is neither half empty nor half full. It's simply larger than it needs to be."</div>
+      </div>
+    </div>
+    
+    <div class="clearfix"></div>
+    
+    
+    <div style="padding:6px;">
+      <br>
+    <h5>Sources:</h5>
+    <p> Auel, Asher. “The Mathematics of Grace Murray Hopper.” Notices of the American Mathematical Society, vol. 66, no. 03, 1 Mar. 2019, p. 1, www.ams.org/journals/notices/201903/rnoti-p330.pdf, https://doi.org/10.1090/noti1810.<br><br>
+      Fields, Jan. Grace Hopper. Carson-Dellosa Publishing, 11 Aug. 2019.<br><br>
+      “Harvard IBM Mark I - Function.” Chsi.harvard.edu, chsi.harvard.edu/harvard-ibm-mark-1-function.<br><br>
+      Hopper, Grace Murray, et al. Hopper, Grace Oral History. Computer History Museum Archive, Naval Data Automation Command, Maryland, Computer History Museum, 1 Dec. 1980, www.computerhistory.org/collections/catalog/102702026.<br><br>
+      Loewen, Nancy. Grace Hopper. Pebble, 1 Aug. 2019.<br><br>
+      Pelleschi, Andrea. Mathematician and Computer Scientist Grace Hopper. Minneapolis, Lerner Publications, 2017.<br><br>
+      Wallmark, Laurie, and Katy Wu. Grace Hopper Queen of Computer Code. New York Sterling Children’s Books, 2017.<br><br>
+      Yale University. “Biography of Grace Murray Hopper | Office of the President.” Yale.edu, 2000, president.yale.edu/biography-grace-murray-hopper.<br><br>
+      </p>
+      <h5>ACKNOWLEDGEMENTS:</h5>
+      <p>We would like to thank our school's prinicpal, Mrs. Vanderklis for helping us contact the school board to get them to unblock the websites we needed for our project.<br><br>
+      We also want to thank Mrs. Scheller, teacher and webmaster at Northshore High School, for helping us (and our coach) learn how to code!<br><br>
+    </p>
+  
+    </div>
+    
+</body>
 </html>
